@@ -1,3 +1,21 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+
+.hero {
+  width: 100%;
+  background: $purple;
+  height: 80px;
+  box-shadow: 1px 1px 5px;
+  float: left;
+
+  .hero-text {
+    width: 50%;
+    margin: auto;
+  
+    p {
+      margin-top: 20px;
+      font-size: 30px;
+      color: $blue;
+      text-shadow: 1px 1px 5px #111;
+    }
+  }
+}

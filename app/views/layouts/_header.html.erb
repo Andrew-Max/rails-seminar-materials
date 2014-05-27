@@ -3,11 +3,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-left">
-        <%= image_tag "logo.jpg", class: 'logo-pic' %>
+        <%= link_to (image_tag "logo.jpg"), root_url %>
+        <%= link_to "Fedora Space", root_url %>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <%= link_to 'Home', root_url %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+
+    </div>
+  </div>
 </nav>
