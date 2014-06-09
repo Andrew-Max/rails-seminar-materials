@@ -1,9 +1,30 @@
+@import "colors";
+
+.hero {
+  width: 100%;
+  background: $purple;
+  height: 80px;
+  box-shadow: 1px 1px 5px;
+  float: left;
+
+  .hero-text {
+    width: 36%;
+    margin: auto;
+
+    p {
+      margin-top: 20px;
+      font-size: 30px;
+      color: $blue;
+      text-shadow: 1px 1px 5px #111;
+    }
+  }
+}
 .signup-copy, .signup-form {
   float: left;
 }
 .signup-copy {
   margin-left: 25%;
-  font-size: 20px;
+  font-size: 35px;
 
   p {
     padding: 50px 20px 20px 20px;
@@ -20,5 +41,29 @@
 
 
 .user-index {
+  float: left;
   clear: both;
+  padding-top: 70px;
+  padding-left: 20px;
+  width: 622px;
+  min-height: 661px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+
+  .id-card {
+    width: 200px;
+    height: 200px;
+    float: left;
+
+    .name {
+      line-height: 50px;
+    }
+  }
+}
+.message-index {
+  float: left;
+  padding-top: 70px;
+  padding-left: 20px;
+  min-height: 661px;
+  border-top: 2px solid black;
 }

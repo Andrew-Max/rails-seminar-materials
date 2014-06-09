@@ -3,10 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Create at</th>
-      <th>Datetime</th>
+      <th>Body</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,10 +11,7 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.name %></td>
-        <td><%= message.email %></td>
-        <td><%= message.create_at %></td>
-        <td><%= message.datetime %></td>
+        <td><%= message.body %></td
         <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
