@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_get_user, only: [:show, :edit, :update, :destroy, :choose_user]
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    @new_user = User.new
   end
 
   # GET /users/1
@@ -21,11 +22,14 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def choose_user
+
+  end
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    set_user
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -63,8 +67,10 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
+    def set_get_user
+      @user ||= (User.find(params[:id]) || cookies.signed[:user] || User.first).tap do |user|
+        cookies.signed[:user] = user
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

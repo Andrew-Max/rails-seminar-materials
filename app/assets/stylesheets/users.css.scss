@@ -1,3 +1,24 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.signup-copy, .signup-form {
+  float: left;
+}
+.signup-copy {
+  margin-left: 25%;
+  font-size: 20px;
+
+  p {
+    padding: 50px 20px 20px 20px;
+  }
+}
+.signup-form {
+  margin-left: 20px;
+  margin-top: 20px;
+
+  .actions {
+    margin-top: 20px;
+  }
+}
+
+
+.user-index {
+  clear: both;
+}
