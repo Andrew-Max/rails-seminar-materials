@@ -3,12 +3,16 @@
     <p>A Special Place Where Fedoras Can Be Free</p>
   </div>
 </div>
-
-<%= render 'new' %>
-
-<div class="user-index clear-fix">
-  <%= render partial: 'user', collection: @users %>
+<div class="users-container">
+  <div class="signup clearfix">
+    <%= render 'new' %>
+  </div>
+  <div class="user-index">
+    <%= render partial: 'user', collection: @users %>
+  </div>
 </div>
-<div class="message-index">
-  <%= render partial: 'message', collection: @messages %>
+<div class="main">
+  <div class="message-index">
+    <%= render partial: 'message', collection: @messages %>
+  </div>
 </div>
