@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20140526033239) do
 
   create_table "messages", force: true do |t|
     t.text     "body"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

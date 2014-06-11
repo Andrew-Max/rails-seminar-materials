@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_get_user, only: [:show, :edit, :update, :destroy, :choose_user]
+  before_action :set_get_user
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
     @new_user = User.new
+    @messages = Message.all
   end
 
   # GET /users/1
@@ -71,17 +72,14 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_get_user
-      @user ||= (User.find(params[:id]) || cookies.signed[:user] || User.first).tap do |user|
-        cookies.signed[:user] = user
+      @id = (User.where(id: params[:id]).first.try(:id) || cookies.signed[:user_id] || User.first.try(:id) || nil).tap do |id|
+        cookies.signed[:user_id] = id
       end
+      @user = User.find(@id) || nil
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email)
-    end
-
-    def get_index
-
     end
 end
