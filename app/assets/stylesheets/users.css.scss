@@ -88,5 +88,17 @@
     margin-left: 30px;
     min-height: 800px;
   .message-index {
+    margin-top: 40px;
+
+    .message {
+      margin-top: 80px;
+
+      .avatar {
+        display: inline-block;
+      }
+      .message-body {
+        display: inline-block;
+      }
+    }
   }
 }

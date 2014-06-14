@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  @messages = @user.messages.all
+  @message = Message.new
   end
 
   # GET /users/new
@@ -75,7 +77,7 @@ class UsersController < ApplicationController
       @id = (User.where(id: params[:id]).first.try(:id) || cookies.signed[:user_id] || User.first.try(:id) || nil).tap do |id|
         cookies.signed[:user_id] = id
       end
-      @user = User.find(@id) || nil
+      @user = User.find(@id) || User.first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

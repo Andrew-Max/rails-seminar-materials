@@ -16,6 +16,7 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     @user = User.find(cookies.signed[:user_id])
+    # render "users/show(@current_user)"
   end
 
   # GET /messages/1/edit

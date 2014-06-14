@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="user-show">
+  <div class="user-info">
+    <div class="gravatar">
+      <%= gravatar_for(@user) %>
+    </div>
+    <div>
+      <ul class="deets">
+        <li><%= @user.name %></li>
+        <li><%= @user.email %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="messages">
+    <div class="new-message">
+      <%= render partial: "messages/new", locals: { new_message: @message } %>
+    </div>
+    <div class="message-index">
+      <%= render partial: "message", collection: @messages %>
+    </div>
+  </div>
+</div>
