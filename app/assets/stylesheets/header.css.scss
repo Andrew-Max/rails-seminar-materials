@@ -16,10 +16,20 @@
     }
   }
   .navbar-right {
-    margin-top: 20px;
     margin-right: 10px !important;
 
     .current-user {
+      ul {
+        list-style: none;
+
+        .avatar img {
+          height: 40px;
+          width: 40px;
+        }
+        .name {
+          text-align: center;
+        }
+      }
     }
     .no-user {
     }

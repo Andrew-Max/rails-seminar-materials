@@ -74,22 +74,7 @@ class UsersController < ApplicationController
     cookies.signed[:current_user_id] = id
   end
 
-  def set_current_user
-    @id = ((params[:current_user_id]) || cookies.signed[:current_user_id] || User.first.try(:id)).tap do |id|
-      cookies.signed[:current_user_id] = id
-    end
-    binding.pry
-    @current_user = @id.present? ? User.find(@id) : nil
-  end
-
-
   private
-
-  def set_owner
-    @owner = User.find(params[:id])
-  end
-
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :email, :current_user_id)
