@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-  set_owner
   @messages = @owner.messages.all
   @message = Message.new
   end

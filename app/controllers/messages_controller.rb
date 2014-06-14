@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
 
   # GET /messages
   # GET /messages.json
-  def index
-    @messages = Message.all
-  end
+  # def index
+  #   @messages = Message.all
+  # end
 
   # GET /messages/1
   # GET /messages/1.json
@@ -14,11 +14,11 @@ class MessagesController < ApplicationController
   end
 
   # GET /messages/new
-  def new
-    @message = Message.new
-    @user = User.find(cookies.signed[:user_id])
-    # render "users/show(@current_user)"
-  end
+  # def new
+  #   @message = Message.new
+  #   @user = User.find(cookies.signed[:user_id])
+  #   # render "users/show(@current_user)"
+  # end
 
   # GET /messages/1/edit
   def edit
@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    binding.pry
+    # binding.pry
     @user = User.find(@owner.id)
     @message = @user.messages.new(message_params)
     respond_to do |format|
@@ -73,6 +73,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:body, :user_id)
+      params.require(:message).permit(:body, :author_id, :owner_id)
     end
 end

@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_owner
-    @owner = User.where(id: params[:id]).first
+    binding.pry
+    @owner = User.where(id: params[:id]).first || User.where(id: message_params[:owner_id]).first
   end
 end
