@@ -7,6 +7,18 @@
         <%= link_to "Fedora Space", root_url, class: 'brand-name' %>
       </ul>
 
+      <ul class="nav navbar-nav navbar-right">
+        <% if @current_user %>
+          <div class="current-user">
+            <%= link_to gravatar_for(@current_user), user_path(@current_user) %>
+          </div>
+        <% else %>
+          <div class="no-user">
+            <p>Click "Be Me" to sign in as a user</p>
+          </div>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </nav>

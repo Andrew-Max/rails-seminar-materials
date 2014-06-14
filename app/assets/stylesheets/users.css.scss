@@ -68,13 +68,19 @@
       }
 
       .name {
-        position: absolute;
+        display: inline-block;
         text-align: center;
         width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
-        line-height: 50px;
+        line-height: 35px;
         max-width: 145px;
+      }
+      input {
+        margin: 0 20%;
+        display: block;
+        border-radius: 0;
+        border: none;
       }
     }
   }

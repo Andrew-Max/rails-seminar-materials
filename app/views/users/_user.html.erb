@@ -2,5 +2,8 @@
   <div class="avatar">
     <%= gravatar_for(user) %>
   </div>
+
   <%= link_to user.name, user_path(user), class: "name" %>
+  <%= button_to("Be Me", users_path, { params: { current_user_id: user} }) %>
+
 </div>

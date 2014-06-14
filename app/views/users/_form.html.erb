@@ -21,7 +21,8 @@
       <%= f.text_field :email %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%#= f.hidden_field :current_user_id, value: @new_user.id %>
+      <%= f.submit class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>

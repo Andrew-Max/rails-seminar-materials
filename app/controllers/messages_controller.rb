@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    @user = User.find(message_params[:user_id])
+    @user = User.find(message_params[:current_user_id])
     @message = @user.messages.new(message_params)
     respond_to do |format|
       if @message.save
