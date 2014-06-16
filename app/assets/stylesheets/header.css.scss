@@ -3,6 +3,7 @@
 .navbar {
   margin-bottom: 0;
   box-shadow: 1px 1px 5px;
+  border-radius: 0;
   .navbar-left {
     img {
       height: 60px;
@@ -19,10 +20,13 @@
     margin-right: 10px !important;
 
     .current-user {
-      ul {
-        list-style: none;
+      .avatar {
+        display: block;
+        margin: auto;
+        height: 40px;
+        width: 40px;
 
-        .avatar img {
+        img {
           height: 40px;
           width: 40px;
         }

@@ -10,14 +10,12 @@
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
           <div class="current-user">
-            <ul>
-              <li class="avatar">
-                  <%= link_to gravatar_for(@current_user), user_path(@current_user) %>
-              </li>
-              <li class="name">
-                 <%=  link_to @current_user.name, user_path(@current_user) %>
-              </li>
-            </ul>
+            <div class="avatar">
+                <%= link_to gravatar_for(@current_user), user_path(@current_user) %>
+            </div>
+            <div class="name">
+               <%=  link_to @current_user.name, user_path(@current_user) %>
+            </div>
           </div>
         <% else %>
           <div class="no-user">
