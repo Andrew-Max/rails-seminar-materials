@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_current_user
 
   def set_current_user
-    @id = ((params[:current_user_id]) || cookies.signed[:current_user_id] || User.first.try(:id)).tap do |id|
+    @id = ((params[:current_user_id]) || cookies.signed[:current_user_id]).tap do |id|
       cookies.signed[:current_user_id] = id
     end
     if params[:action] == 'log_out'

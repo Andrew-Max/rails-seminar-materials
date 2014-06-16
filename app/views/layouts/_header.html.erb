@@ -13,10 +13,8 @@
             <div class="avatar">
                 <%= link_to gravatar_for(@current_user), user_path(@current_user) %>
             </div>
-            <div class="name">
-               <%=  link_to @current_user.name, user_path(@current_user) %>
-            </div>
           </div>
+          <%= link_to "Logout", logout_url %>
         <% else %>
           <div class="no-user">
             <p>Click "Be Me" to sign in as a user</p>
