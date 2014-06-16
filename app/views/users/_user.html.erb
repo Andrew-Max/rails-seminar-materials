@@ -1,6 +1,6 @@
 <div class="id-card">
   <div class="avatar">
-    <%= link_to gravatar_for(user), user_path(user) %>
+    <%= gravatar_link(user) %>
   </div>
 
   <%= link_to user.name, user_path(user), class: "name" %>
