@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
 # only index and show
-  resources :users, only: [:index, :show, :create,]
+  resources :users, only: [:show, :create, :update, :destroy]
 
-  resources :messages, only: [:create]
+  resources :messages, only: [:create, :update, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'users#index'
+  get 'logout' => 'users#log_out'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'logout' => 'users#log_out'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
