@@ -27,9 +27,8 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    # binding.pry
-    @user = User.find(@owner.id)
-    @message = @user.messages.new(message_params)
+    @owner = User.find(message_params[:owner_id])
+    @message = Message.new(message_params)
     respond_to do |format|
       if @message.save
         format.html { redirect_to user_path(@owner), notice: 'Message was successfully created.' }

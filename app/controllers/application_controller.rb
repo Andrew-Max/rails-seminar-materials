@@ -4,17 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_current_user
-  before_action :set_owner
 
   def set_current_user
     @id = ((params[:current_user_id]) || cookies.signed[:current_user_id] || User.first.try(:id)).tap do |id|
       cookies.signed[:current_user_id] = id
     end
-    @current_user = @id.present? ? User.find(@id) : nil
-  end
-
-  def set_owner
-    binding.pry
-    @owner = User.where(id: params[:id]).first || User.where(id: message_params[:owner_id]).first
+    if params[:action] == 'log_out'
+      @current_user = nil
+    else
+      @current_user = @id.present? ? User.find(@id) : nil
+    end
   end
 end

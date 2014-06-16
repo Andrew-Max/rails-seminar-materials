@@ -1,6 +1,11 @@
 <div class="message">
-  <div class="avatar">
-    <%= gravatar_for(message.user) %>
+  <div class="meta-data">
+    <div class="gravatar">
+      <%= gravatar_for(message.author) %>
+    </div>
+    <div class="info">
+      <p><%= message.author.name %></p>
+    </div>
   </div>
   <div class="message-body">
     <%= message.body %>

@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  @owner = User.find(params[:id])
   @messages = @owner.messages.all
   @message = Message.new
   end
@@ -70,7 +71,8 @@ class UsersController < ApplicationController
   end
 
   def log_out
-    cookies.signed[:current_user_id] = id
+    cookies.signed[:current_user_id] = nil
+    redirect_to root_url
   end
 
   private
