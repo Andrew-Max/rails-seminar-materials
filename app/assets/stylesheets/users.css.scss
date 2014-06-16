@@ -83,16 +83,10 @@
         line-height: 35px;
         max-width: 145px;
       }
-      form {
-        margin: 0 17%;
+      .btn {
+        margin: 0 16%;
         border-radius: 0;
-        border: none;
-
-
-        input {
-          border: none;
-          background: #5cb85c;
-        }
+        padding: 5px 20px;
       }
     }
   }
@@ -129,5 +123,6 @@
   .message-body {
     clear: left;
     padding: 10px 10px;
+    font-size: 18px;
   }
 }

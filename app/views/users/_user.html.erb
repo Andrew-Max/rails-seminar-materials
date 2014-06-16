@@ -4,6 +4,5 @@
   </div>
 
   <%= link_to user.name, user_path(user), class: "name" %>
-  <%= button_to("Be Me", root_url, { method: :get, params: { current_user_id: user}, form_class: "btn btn-primary btn-success"  }) %>
-
+  <%= link_to("Be Me", root_url(current_user_id: user), class: "btn btn-primary btn-success") %>
 </div>
