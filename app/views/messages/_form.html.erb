@@ -1,11 +1,11 @@
 <% if @current_user %>
   <%= form_for(new_message) do |f| %>
-    <% if @message.errors.any? %>
+    <% if new_message.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+        <h2><%= pluralize(new_message.errors.count, "error") %> prohibited this message from being saved:</h2>
 
         <ul>
-        <% @message.errors.full_messages.each do |message| %>
+        <% new_message.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
