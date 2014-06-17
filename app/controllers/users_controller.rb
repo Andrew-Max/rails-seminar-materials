@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   # GET /users
-  # GET /users.json
   def index
     @users = User.all
     @new_user = User.new
@@ -9,12 +8,47 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show
-  @owner = User.find(params[:id])
-  @messages = @owner.messages.all
-  @message = Message.new
+    @owner = User.find(params[:id])
+    @messages = @owner.messages.all
+    @message = Message.new
   end
+
+  # POST /users
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      params[:current_user_id] = @user.id
+      set_current_user_id
+      redirect_to @user, notice: 'User was successfully created.'
+    else
+      @users = User.all
+      @new_user = @user
+      @errors = @user.errors
+      @messages = Message.all
+      render :index
+    end
+  end
+
+  def log_out
+    cookies.signed[:current_user_id] = nil
+    redirect_to root_url
+  end
+
+  # PATCH/PUT /users/1
+  # def update
+  #   if @current_user.update(user_params)
+  #     redirect_to @user, notice: 'User was successfully updated.'
+  #   else
+  #     render :edit
+  #   end
+  # end
+
+  # DELETE /users/1
+  # def destroy
+  #   @current_user.destroy
+  #   redirect_to users_url, notice: 'User was successfully destroyed.'
+  # end
 
   # GET /users/new
   # def new
@@ -24,57 +58,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   # def edit
   # end
-
-  # POST /users
-  # POST /users.json
-  def create
-    @user = User.new(user_params)
-    respond_to do |format|
-      if @user.save
-        params[:current_user_id] = @user.id
-        set_current_user_id
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        # binding.pry
-        @users = User.all
-        @new_user = @user
-        @errors = @user.errors
-        @messages = Message.all
-        format.html { render :index }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
-  def update
-    respond_to do |format|
-      if @current_user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /users/1
-  # DELETE /users/1.json
-  def destroy
-    @current_user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
-  def log_out
-    cookies.signed[:current_user_id] = nil
-    redirect_to root_url
-  end
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
