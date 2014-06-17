@@ -1,3 +1,6 @@
+<!-- A rails form.  The "form_for@new user" submits the data from the fields at the bottom which match
+up with the attributes on the user model to the users#create action as parameters. That controller then creates
+that user in the database, makes it the ccurrent user and reroutes to that user's page -->
 <div class="signup-form">
   <%= form_for(@new_user) do |f| %>
     <% if @new_user.errors.any? %>
@@ -21,7 +24,6 @@
       <%= f.text_field :email %>
     </div>
     <div class="actions">
-      <%#= f.hidden_field :current_user_id, value: @new_user.id %>
       <%= f.submit class: "btn btn-primary" %>
     </div>
   <% end %>
