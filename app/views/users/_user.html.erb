@@ -2,8 +2,9 @@
 <div class="id-card">
   <div class="avatar">
     <%= gravatar_link(user) %>
+    <!-- look in application helper to see how gravatar link works -->
   </div>
-
-  <%= link_to user.name, user_path(user), class: "name" %>
+  <!-- look at the rails docs to see how link_to works -->
+  <%#= link_to <<<replace with the name of user : this isthe text of the link >>>, user_path(user), class: "name" %>
   <%= link_to("Be Me", root_url(current_user_id: user), class: "btn btn-primary btn-success") %>
 </div>

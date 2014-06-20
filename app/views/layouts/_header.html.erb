@@ -12,10 +12,11 @@
         <% if @current_user %>
           <div class="current-user">
             <div class="avatar">
-                <%= gravatar_link(@current_user) %>
+                <%#= <<< make a gravatar_link for @user >>> %>
+                <!-- look at application_helper.rb to see how it works and search in the app to find examples -->
             </div>
           </div>
-          <%= link_to "Logout", logout_url %>
+          <%#= <<< link_to the word "logout", and the logout_url>>> %>
         <% else %>
           <div class="no-user">
             <p>Click "Be Me" to sign in as a user</p>

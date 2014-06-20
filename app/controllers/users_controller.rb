@@ -9,9 +9,9 @@ class UsersController < ApplicationController
   # This action will render the "app/views/users/index.htm.erb" by default so that is where all this data gets sent.
   # routing info: HTTP GET to => /users
   def index
-    @users = User.all
-    @new_user = User.new
-    @messages = Message.all
+    # @users = <<< Active record syntax for ALL users >>>
+    # @new_user = <<< Active Record syntax to make a NEW user Hint: It's not create>>>
+    # @messages = <<< Active record syntax for ALL messages >>>
   end
 
   # users#show notes
@@ -21,9 +21,9 @@ class UsersController < ApplicationController
   # user and saves them to @messages and creates a @new_message object for use by the new message form
   # routing info: HTTP GET to => /users/1
   def show
-    @owner = User.find(params[:id])
-    @messages = @owner.messages.all
-    @new_message = Message.new
+    # @owner =  <<< Active record syntax to FIND a user by the 'id' parameter >>>
+    # @messages = <<< Active record syntax for all of the messages that belong to @owner >>>
+    # @new_message = <<< Active record syntax to make a new message HINT: It's not create!>>>
   end
 
   # users#create notes
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     else
       @users = User.all
       @new_user = @user
-      @errors = @user.errors
+      # @errors = <<< get the errrors for '@user' >>>
       @messages = Message.all
       render :index
     end
@@ -49,10 +49,11 @@ class UsersController < ApplicationController
   # users#log_out notes
   # destroys the cookie which stores the current_user id for session faking in app/controllers/application_controller.rb
   # once this is destroyed there is no current user and it redirects to the home page
+  # google "rails named path helpers for more info on how to use rails helpers to generate urls"
   # routing info: HTTP GET to => /logout
   def log_out
     cookies.signed[:current_user_id] = nil
-    redirect_to root_url
+    # <<< redirect_to the url of root_page >>>
   end
 
 

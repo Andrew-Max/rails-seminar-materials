@@ -1,4 +1,4 @@
-<!-- This is an individual users show page rendered by users#show
+<!-- This is an individual user's show page rendered by users#show
 it uses <% %> erb syntax to evaluate ruby and display user information
 It renders the new message partial which just renders a form and it renders the message
 partial once for each member of the @messages collection which is the user's list of messages -->
@@ -6,10 +6,11 @@ partial once for each member of the @messages collection which is the user's lis
   <div class="user-info">
     <div class="gravatar">
       <%= gravatar_for(@owner) %>
+      <!-- look in application_helper.rb to see how  gravatar for works -->
     </div>
     <div>
       <ul class="deets">
-        <li><%= @owner.name %></li>
+        <li><%#= <<<replace with ruby that will evaluate to the name of @owner >>>>  %></li>
       </ul>
     </div>
   </div>
@@ -18,7 +19,7 @@ partial once for each member of the @messages collection which is the user's lis
       <%= render partial: "messages/form", locals: { new_message: @new_message} %>
     </div>
     <div class="message-index">
-      <%= render partial: "message", collection: @messages %>
+      <%#= <<< render the partial for a single message for each member of the @messages from users#show >>> %>
     </div>
   </div>
 </div>

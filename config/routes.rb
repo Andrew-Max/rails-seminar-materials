@@ -8,11 +8,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
-  get 'logout' => 'users#log_out'
+  # <<< make your site root route to users#index ( the index action of your users controller) >>>
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  # <<< route '/logout' to the users#logout (the logout action of the users controller)>>>
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

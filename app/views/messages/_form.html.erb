@@ -18,13 +18,23 @@ back to the controller but dont take user input and are not visible to the user 
     <% end %>
 
     <div class="field">
+        <!-- this is the form for new_message it collects data for a message and then sends it to the controller which creates
+        the message in the database -->
+
       <%= f.label :body %><br>
+      <!-- f.label just creates a title, its not submitting any data through the form -->
+
       <%= f.text_field :body %>
+            <!-- f.text is an input field which is submitted with the form as a property of the message -->
+
       <%= f.hidden_field :owner_id, value: @owner.id %>
-      <%= f.hidden_field :author_id, value: @current_user.id %>
+      <!-- <<< create another hidden field for author_id where the value is the user id of the current_user >>> -->
+        <!-- f.hidden_field has no visible field in the form. It just submits data with the form -->
+
     </div>
     <div class="actions">
       <%= f.submit %>
+      <!-- the submit button  -->
     </div>
   <% end %>
 <% else %>

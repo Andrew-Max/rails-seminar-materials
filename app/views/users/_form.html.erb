@@ -2,22 +2,23 @@
 up with the attributes on the user model to the users#create action as parameters. That controller then creates
 that user in the database, makes it the ccurrent user and reroutes to that user's page -->
 <div class="signup-form">
-  <%= form_for(@new_user) do |f| %>
-    <% if @new_user.errors.any? %>
+  <%#= <<< create a form for new_user HINT: look t the syntax from the other form! >>> %>
+    <% if new_user.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@new_user.errors.count, "error") %> prohibited this user from being saved:</h2>
+        <h2><%= pluralize(new_user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
         <ul>
-        <% @new_user.errors.full_messages.each do |message| %>
+        <% new_user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
       </div>
     <% end %>
 
+<!-- look at the notes on the new messages form for an explanation of how forms work -->
     <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <!-- <<<  make a label field for name >>>
+      <<< make a text field where the user can input their name >>> -->
     </div>
     <div class="field">
       <%= f.label :email %><br>

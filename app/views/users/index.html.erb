@@ -5,14 +5,15 @@ The render partial for collection syntax means that that partial will be rendere
 <div class="hero">
   <div class="hero-text">
     <p>A Special Place Where Fedoras Can Be Free</p>
+    <!-- you can retheme the site here if you want -->
   </div>
 </div>
 <div class="users-container">
   <div class="signup clearfix">
-    <%= render 'new' %>
+    <%= render'new', new_user: @new_user %>
   </div>
   <div class="user-index">
-    <%= render partial: 'user', collection: @users %>
+    <%#= <<< render the partial for a single user and for each member of the collection @ user>>> %>
   </div>
 </div>
 <div class="main">
