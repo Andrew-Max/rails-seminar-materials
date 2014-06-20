@@ -1,7 +1,7 @@
 try_rails_presentation
 ======================
 
-Check out the "create-a-rails-app" branch for a version of this site which has been turned into a project with detailed instructions for the user to recreate.
+Check out the "create-a-rails-app" branch for a version of this site which has been turned into a project with detailed instructions for the user to recreate the whole site!
 
 to get into that branch go to the terminal and use the command:
     git checkout create-a-rails-app
