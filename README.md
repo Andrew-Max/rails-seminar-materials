@@ -6,9 +6,10 @@ Check out the "create-a-rails-app" branch for a version of this site which has b
 to get into that branch go to the terminal and use the command:
     git checkout create-a-rails-app
     
-the code in your try_rails presentation directory will now, through the magic of git, be the project version.
+the code in your try_rails presentation directory will now, through the magic of git, be the project version. Read the readme file in that directory for instructions on how to get started on the project.
 
-Steps to get your new rails app all nice and good. (Based on my experience getting environments up on my ubuntu box).
+## Steps to get your new rails app all nice and good. 
+(Based on my experience getting environments up on my ubuntu box).
 See below for Windows setup instuctions.
 
 1) Have a computer
