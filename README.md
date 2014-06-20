@@ -37,7 +37,7 @@ Best of luck brave warrior.
     bundle
     rake db:migrate
     
-If all of these have succeeded you can go to the url 'localhost:3000' (note: no www or http:// just type that exactly)in your browsser and the app will be up and running
+If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browsser and the app will be up and running
 
 If you get failures at any point along the way, copy and paste the error messages you get into google for tips on how to resolve the issue.
     
