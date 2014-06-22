@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   # users#show notes
-  # this represent the only real sub page of our app. Clicking on a user or there avatar in the ui will take you here
+  # this represent the only real sub page of our app. Clicking on a user or their avatar in the ui will take you here
   # Each link to a user passes an id param (params[:id] evaluates to the value of this parameter) so when this action is called we
   # will always have that parameter. We use it to define the owner of the current page under @owner. It gets a list of all messages for that
   # user and saves them to @messages and creates a @new_message object for use by the new message form
