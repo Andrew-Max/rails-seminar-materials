@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   # messages#create info
   # the only messages controller action, it handles the submission of the new message form. If it succesfully creates the message object
-  # based on the parameters from the form it will rerender that users show page with the new comment. Otherwise it will rerender that users
+  # based on the parameters from the form, it will rerender that user's show page with the new comment. Otherwise it will rerender that users
   # show page with the message and errors (error rendering is not currently functional but does not break the page because the  instance variables are lost in the redirect)
   # routing info: HTTP POST to => /messages
   def create
