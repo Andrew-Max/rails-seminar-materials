@@ -16,26 +16,26 @@ See below for Windows setup instuctions.
 
 2) Have ruby (I recommend installing rubies through rvm)
 to get rvm use the command :
-        curl -sSL https://get.rvm.io | bash -s stable
+      -  curl -sSL https://get.rvm.io | bash -s stable
 followed by 
-        rvm install ruby 2.1.1
+      -  rvm install ruby 2.1.1
 and 
-        rvm use ruby 2.1.1
+      -  rvm use --default ruby 2.1.1
           
           
 3) Have git (if you use linux type the following in the command line:)
-        sudo apt-get install git
+       - sudo apt-get install git
 if you're a Mac user, figure it out yourslef ya hipster! Basically just grab it with homebrew
 Best of luck brave warrior.
         
         
         
 4) in the command line : 
-    git clone https://github.com/Andrew-Max/try_rails_presentation.git
-    cd try_rails_presentation
-    gem install bundler
-    bundle
-    rake db:migrate
+-    git clone https://github.com/Andrew-Max/try_rails_presentation.git
+ -   cd try_rails_presentation
+  -  gem install bundler
+  -  bundle
+   - rake db:migrate
     
 If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browsser and the app will be up and running
 
