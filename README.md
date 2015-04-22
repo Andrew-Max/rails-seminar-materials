@@ -16,7 +16,7 @@ See below for Windows setup instuctions.
 
 2) Have ruby (I recommend installing rubies through rvm)
 to get rvm use the command :
-      -  curl -sSL https://get.rvm.io | bash -s stable
+      `` $ curl -sSL https://get.rvm.io | bash -s stable ``
 followed by 
       -  rvm install ruby 2.1.1
 and 
