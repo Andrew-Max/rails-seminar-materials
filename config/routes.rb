@@ -1,62 +1,35 @@
 Rails.application.routes.draw do
 
-# only index and show
-  resources :users, only: [:show, :create, :update, :destroy]
+  # Get an overview of all your route at the command line with "$rake routes".
 
-  resources :messages, only: [:create, :update, :destroy]
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # There are two basic ways to declare the routes for your application: individually or a set of actions for a resource.
+
+  # To declare a route individually you must specify an http action, a url name, and an action in a controller
+  # the format is:
+  # <verb> '<string url>', to: '<controlle>#<action>'
+  # an example would be
+  # get '/photo', to: 'photo#index'
+
+  # The second way is to declare all of the routes for a resource
+  # an example would be
+  # resources :photo
+  # be default this will create 7 routes based around the user resource: index, show, edit, update, new, create, destroy
+  # you can also limit a resource if you don't need all the routes. an example would be:
+  # resources :photos, only: [:show, :sdestroy]
+  # or
+  # resources :photos, except: [:show, :destroy]
+  # for more info on resources checkout http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions
+
+  # there is also usually a special route declaration that specifies where the base url '/' routes to
+  root to: 'users#index'
+
+  #<<<create routes for the user resource. Only create a show, create, update, and destroy action >>>
+  #<<<create routes for the message resource. Only create a show, create, update, and destroy action >>>
+  # after you have created the routes go to the command line and type '$ rake routes to check that you have created the routes correctly'
 
   # You can have the root of your site routed with "root"
-  # <<< make your site root route to users#index ( the index action of your users controller) >>>
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   # <<< route '/logout' to the users#logout (the logout action of the users controller)>>>
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end
