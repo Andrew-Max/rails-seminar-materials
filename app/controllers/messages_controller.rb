@@ -6,6 +6,10 @@ class MessagesController < ApplicationController
   # based on the parameters from the form, it will rerender that user's show page with the new comment. Otherwise it will rerender that users
   # show page with the message and errors (error rendering is not currently functional but does not break the page because the  instance variables are lost in the redirect)
   # routing info: HTTP POST to => /messages
+  def index
+    @messages = Message.all
+  end
+
   def create
     @owner = User.find(message_params[:owner_id])
     @message = Message.new(message_params)
@@ -16,6 +20,7 @@ class MessagesController < ApplicationController
       redirect_to user_path(@owner)
     end
   end
+
 
   # PATCH/PUT /messages/1
   # def update

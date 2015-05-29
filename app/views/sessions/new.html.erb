@@ -1,0 +1,11 @@
+<%= link_to "Create a New User", new_user_path %>
+
+<p>or</p>
+
+<p>Sign in as an existing user</p>
+
+<div class="users-container">
+  <div class="user-index">
+    <%= render partial: 'users/user', collection: @users %>
+  </div>
+</div>
