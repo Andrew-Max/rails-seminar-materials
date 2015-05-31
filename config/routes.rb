@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 # only index and show
   root 'messages#index'
 
-  resources :users, only: [:show, :create, :update, :destroy, :new]
-  resources :messages, only: [:create, :update, :destroy]
+  resources :users, only: [:index, :show, :create, :update, :destroy, :new] do
+    resources :messages, only: [:create, :update, :destroy]
+  end
 
   resources :sessions, only: [:create, :new]
   # The priority is based upon order of creation: first created -> highest priority.

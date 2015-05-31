@@ -5,5 +5,5 @@
   </div>
 
   <%= link_to user.name, user_path(user), class: "name" %>
-  <%= link_to("Be Me", root_url(current_user_id: user), class: "btn btn-primary btn-success") %>
+  <%= link_to("Be Me", sessions_path(id: user.id), method: "POST", class: "btn btn-primary btn-success") %>
 </div>

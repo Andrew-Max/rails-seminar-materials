@@ -5,17 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_action :set_current_user_id, :check_session
 
-
   def set_current_user_id
     if User.any?
-      @id = ((params[:current_user_id]) || cookies.signed[:current_user_id]).tap do |id|
-        cookies.signed[:current_user_id] = id
-      end
+      @id = cookies.signed[:current_user_id]
+      @current_user = @id ? User.find(@id) : nil
     else
       cookies.signed[:current_user_id] = nil
     end
-    @current_user = @id.present? ? User.find(@id) : nil
-
   end
 
   def check_session
