@@ -15,10 +15,16 @@ partial once for each member of the @messages collection which is the user's lis
   </div>
   <div class="messages">
     <div class="new-message">
-      <%= render partial: "messages/form", locals: { new_message: @new_message} %>
+      <%= render partial: "messages/form", locals: { message: @new_message} %>
     </div>
-    <div class="message-index">
-      <%= render partial: "message", collection: @messages %>
-    </div>
+
+    <% if @owner.messages.any? %>
+      <div class="message-index">
+        <%= render partial: "messages/message", collection: @messages %>
+      </div>
+    <% else %>
+      <h1><%= @owner.name %> has no messages</h1>
+    <% end %>
   </div>
 </div>
+

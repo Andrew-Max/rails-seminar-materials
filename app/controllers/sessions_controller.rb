@@ -17,6 +17,8 @@ class SessionsController < ApplicationController
 
   def create
     binding.pry
-    cookies.signed[:current_user_id] = params[:id]
+    user_id = params[:id]
+    cookies.signed[:current_user_id] = user_id
+    redirect_to user_path(user_id)
   end
 end
