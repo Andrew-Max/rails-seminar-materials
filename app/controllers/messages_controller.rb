@@ -5,11 +5,7 @@ class MessagesController < ApplicationController
   # the only messages controller action, it handles the submission of the new message form. If it succesfully creates the message object
   # based on the parameters from the form, it will rerender that user's show page with the new comment. Otherwise it will rerender that users
   # show page with the message and errors (error rendering is not currently functional but does not break the page because the  instance variables are lost in the redirect)
-  # routing info: HTTP POST to => /messages
-  def index
-    @messages = Message.all
-  end
-
+  # routing info: HTTP POST to => /messagesW
   def create
     @owner = User.find(message_params[:owner_id])
     @message = Message.new(message_params)
@@ -22,11 +18,6 @@ class MessagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_message
-      @message = Message.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
       params.require(:message).permit(:body, :author_id, :owner_id)

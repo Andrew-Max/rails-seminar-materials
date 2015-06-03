@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :users, except: [:destroy, :edit, :update, :index]
+  resources :users, only: [:show, :create, :new]
 
-  resources :messages, only: [:index, :create]
+  resources :messages, only: [:create]
 
   resources :sessions, only: [:create, :new]
   get 'logout' => 'sessions#destroy'
