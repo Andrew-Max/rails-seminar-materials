@@ -9,7 +9,7 @@
 class Message < ActiveRecord::Base
 
   belongs_to :owner, class_name: 'User'
-  belongs_to :author, class_name: 'User'
+  # <<< make another belongs_to for author that is attached to the "User class". Note punctuation and capitalization >>>
 
   validates :body, presence: true
 end
