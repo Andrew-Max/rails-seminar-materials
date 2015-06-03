@@ -11,6 +11,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
           <div class="current-user">
+            <%= @current_user.name %>
             <div class="avatar">
                 <%= gravatar_link(@current_user) %>
             </div>

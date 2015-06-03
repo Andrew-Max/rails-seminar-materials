@@ -16,9 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
     user_id = params[:id]
     cookies.signed[:current_user_id] = user_id
-    redirect_to user_path(user_id)
+    redirect_to root_url
   end
 end

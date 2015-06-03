@@ -19,9 +19,6 @@
   }
 }
 .users-container {
-  float: left;
-  width: 622px;
-
   .signup {
     position: relative;
     display: inline-block;
@@ -54,8 +51,8 @@
     clear: both;
     margin-top: -5px;
     padding-top: 10px;
-    padding-left: 20px;
-    min-height: 600px;
+    height: 765px;
+    overflow-y: auto;
 
     .id-card {
       background: #FFCD70;

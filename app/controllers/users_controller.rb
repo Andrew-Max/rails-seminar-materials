@@ -48,32 +48,6 @@ skip_before_filter :check_session, :only => [:new, :create]
   def new
     @user = User.new
   end
-  # these other methods could be used to increase functionality in the app but havent been integrate
-  # and arent vital to the apps functioning
-
-  # PATCH/PUT /users/1
-  # def update
-  #   if @current_user.update(user_params)
-  #     redirect_to @user, notice: 'User was successfully updated.'
-  #   else
-  #     render :edit
-  #   end
-  # end
-
-  # DELETE /users/1
-  # def destroy
-  #   @current_user.destroy
-  #   redirect_to users_url, notice: 'User was successfully destroyed.'
-  # end
-
-  # GET /users/new
-  # def new
-  #   @user = User.new
-  # end
-
-  # GET /users/1/edit
-  # def edit
-  # end
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.

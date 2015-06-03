@@ -3,7 +3,10 @@
   <div class="avatar">
     <%= gravatar_link(user) %>
   </div>
-
-  <%= link_to user.name, user_path(user), class: "name" %>
+  <% if @current_user %>
+    <%= link_to user.name, user_path(user), class: "name" %>
+  <% else %>
+    <div class="name"><%= user.name %></div>
+  <% end %>
   <%= link_to("Be Me", sessions_path(id: user.id), method: "POST", class: "btn btn-primary btn-success") %>
 </div>
