@@ -34,8 +34,8 @@ Rails.application.routes.draw do
 
 
 # code for completion
-###########################################################################################3
-  #<<<create routes for the user resource. Create all routes except destroy, edit , and update >>>
+###########################################################################################
+  #<<<create routes for the user resource. Create all routes except destroy, edit , index and update >>>
 
   #<<<create routes for the message resource. Only create index and create routes >>>
 
