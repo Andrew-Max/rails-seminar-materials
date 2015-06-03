@@ -15,16 +15,18 @@ partial once for each member of the @messages collection which is the user's lis
   </div>
   <div class="messages">
     <div class="new-message">
-      <%= render partial: "messages/form", locals: { message: @new_message} %>
+      <!-- <<< render the messages/form partial and pass a hash of locals that set message to the @new_message instance variable >>> -->
+      <!-- look online at the rails docs for render partial for help with the locals syntax -->
+      <!-- It will look something like locals: {x: y} -->
     </div>
 
-    <% if @owner.messages.any? %>
-      <div class="message-index">
-        <%= render partial: "messages/message", collection: @messages %>
-      </div>
-    <% else %>
-      <h1><%= @owner.name %> has no messages</h1>
-    <% end %>
+
+    <!-- <<< inside of the correct erb tags  start an if statement which checks if @owner has any messages >>> -->
+        <!-- <<< if the do create a div with class message-index and render the partial messages/message for collection @messages inside of it >>> -->
+
+    <!-- <<< create an else for your if block inside erb tags >>> -->
+        <!-- <<< create an h1 and inside of it add a message that says that @owner does not have any messages (you will need erb tags t to display @owners name)>>> -->
+    <!-- <<< end your if / else statement >>> -->
   </div>
 </div>
 

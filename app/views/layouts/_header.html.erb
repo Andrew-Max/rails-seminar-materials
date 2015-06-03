@@ -1,4 +1,6 @@
 <!-- The header markup. Uses twitter bootstrap -->
+<!-- This is rendered by the application layout which is the base template for all templates in the app so it is rendeered in every page -->
+<!-- much better then adding it individually to each page! -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -13,10 +15,11 @@
           <div class="current-user">
             <%= @current_user.name %>
             <div class="avatar">
-                <%= gravatar_link(@current_user) %>
+                <!-- <<< make a gravatar_link for @user make sure to put it in the correct erb tags>>> -->
+                <!-- look at application_helper.rb to see how it works and search in the app to find examples -->
             </div>
           </div>
-          <%= link_to "Logout", logout_path %>
+          <!-- <<< use the rails link_to helper to create a logout link here >>> -->
         <% else %>
           <div class="no-user">
             <p>Click "Be Me" to sign in as a user</p>

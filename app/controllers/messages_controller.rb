@@ -1,14 +1,4 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update, :destroy]
-
-  # messages#index notes
-  # routing info: HTTP GET to => /messages
-
-  # An index displays all of a kind of object so the messages#index displays all messages in the database for all users.
-
-  #<<< define a method called index >>>
-  #<<< inside that method create an instance variable @messages and set it equal to all of the messages in the database>>>
-
   # messages#create notes
   # routing info: HTTP POST to => /messages
 
@@ -27,10 +17,6 @@ class MessagesController < ApplicationController
   end
 
   private
-    def set_message
-      @message = Message.find(params[:id])
-    end
-
     def message_params
       params.require(:message).permit(:body, :author_id, :owner_id)
     end

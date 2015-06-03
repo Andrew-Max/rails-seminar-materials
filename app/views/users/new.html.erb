@@ -1,11 +1,16 @@
+<!-- This is the new user signup form rendered by the new method of the users controller(users#new in rails notation)
+This form intelligently knows (via code in the form_for method) that this should submit to the create method in the users controller
+(users#create in rails notation)
+It will pass the values entered in the fields via a hash called params when it is submitted -->
+
 <div class="signup-form">
-  <%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
+  <%= form_for(@new_user) do |f| %>
+    <% if @new_user.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+        <h2><%= pluralize(@new_user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
         <ul>
-        <% @user.errors.full_messages.each do |message| %>
+        <% @new_user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
@@ -16,10 +21,14 @@
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
-    <div class="field">
-      <%= f.label :email %><br>
-      <%= f.text_field :email %>
-    </div>
+
+    <!-- <<< create another div with class field>>> -->
+    <!-- <<< Inside the div create another form label and form text field for the attribute email >>> -->
+
+
+    <!-- <<< create another div with class actions>>> -->
+    <!-- <<< Inside the div create a form submit and set its class argument equal to class: "btn btn-primary" >>> -->
+    <!-- <<< Look online on the docs for form_for for help with the syntax if you are unsure >>> -->
     <div class="actions">
       <%= f.submit class: "btn btn-primary" %>
     </div>

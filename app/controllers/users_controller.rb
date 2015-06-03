@@ -48,7 +48,7 @@ skip_before_filter :check_session, :only => [:new, :create]
   # The new user is necessary for the form. Note the new instead of create so this isn't saved to the database here.
 
   #<<<  define a new method called new. Make sure to put an "end" below it>>>
-  #<<<  Inside your new method create an instance variable @user and set it equal to a new user >>>
+  #<<<  Inside your new method create an instance variable @new_user and set it equal to a new user >>>
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   # This method is called when creating a new user. It prevents people from using our form to submit malicious content.

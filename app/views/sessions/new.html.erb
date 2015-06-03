@@ -1,5 +1,5 @@
 <h2>
-  <%= link_to "Click Here to Create a New User", new_user_path %>
+  <!-- <<<Use the rails link_to helper to create a link to the page where new users are created. Put some text instructing the user as to what the link does ie "Click here to create a user">>> -->
 </h2>
 
 <p>or</p>
@@ -8,6 +8,6 @@
 
 <div class="users-container">
   <div class="user-index">
-    <%= render partial: 'users/user', collection: @users %>
+    <!-- <<<Render the partial _user partial in the users directory for each member of the the collection @users>>> -->
   </div>
 </div>

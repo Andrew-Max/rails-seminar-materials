@@ -4,6 +4,8 @@
     <%= gravatar_link(user) %>
   </div>
   <% if @current_user %>
+    <!-- <<<use the rails link_to helper to create a link to the user path for the variable user with a text of the user's name. use link_to's "class" agrument to give this link a css class of "name">>> -->
+    <!-- use the link_to at the bottom of the page as well as google for help with syntax and arguments! -->
     <%= link_to user.name, user_path(user), class: "name" %>
   <% else %>
     <div class="name"><%= user.name %></div>
