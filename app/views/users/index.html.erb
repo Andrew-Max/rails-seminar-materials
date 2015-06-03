@@ -8,15 +8,7 @@ The render partial for collection syntax means that that partial will be rendere
   </div>
 </div>
 <div class="users-container">
-  <div class="signup clearfix">
-    <%= render 'new' %>
-  </div>
   <div class="user-index">
     <%= render partial: 'user', collection: @users %>
-  </div>
-</div>
-<div class="main">
-  <div class="message-index">
-    <%= render partial: 'message', collection: @messages %>
   </div>
 </div>

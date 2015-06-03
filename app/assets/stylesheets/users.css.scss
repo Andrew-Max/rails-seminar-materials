@@ -19,43 +19,13 @@
   }
 }
 .users-container {
-  float: left;
-  width: 622px;
-
-  .signup {
-    position: relative;
-    display: inline-block;
-    width: 622px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid black;
-
-    .signup-copy, .signup-form {
-      float: left;
-    }
-    .signup-copy {
-
-      font-size: 35px;
-
-      p {
-        padding: 40px 20px 10px 20px;
-      }
-    }
-    .signup-form {
-      margin-left: 20px;
-      margin-top: 20px;
-
-      .actions {
-        margin-top: 20px;
-      }
-    }
-  }
   .user-index {
     display: inline-block;
     clear: both;
     margin-top: -5px;
     padding-top: 10px;
-    padding-left: 20px;
-    min-height: 600px;
+    height: 765px;
+    overflow-y: auto;
 
     .id-card {
       background: #FFCD70;
@@ -120,5 +90,13 @@
     clear: left;
     padding: 10px 10px;
     font-size: 18px;
+  }
+}
+
+.signup-form {
+  padding: 20px;
+
+  .btn {
+    margin-top: 10px;
   }
 }

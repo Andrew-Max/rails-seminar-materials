@@ -1,0 +1,16 @@
+<div class="container-flex">
+  <div class="row-flex">
+    <div class="col-xs-4 users-container">
+      <h3>
+        Visit another User's profile to write them messages and view their feed
+      </h3>
+      <div class="user-index">
+        <%= render partial: 'users/user', collection: @users %>
+      </div>
+    </div>
+    <div class="col-xs-8 messages">
+      <h3>Global Feed</h3>
+      <%= render partial: "messages/message", collection: @messages %>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+skip_before_filter :check_session, :only => [:new, :create]
 
   # users#index notes
   # The index method is in effect the home page of our app and combines multiple actions. The @users instance
@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   # routing info: HTTP GET to => /users
   def index
     @users = User.all
-    @new_user = User.new
     @messages = Message.all
   end
 
@@ -46,42 +45,9 @@ class UsersController < ApplicationController
     end
   end
 
-  # users#log_out notes
-  # destroys the cookie which stores the current_user id for session faking in app/controllers/application_controller.rb
-  # once this is destroyed there is no current user and it redirects to the home page
-  # routing info: HTTP GET to => /logout
-  def log_out
-    cookies.signed[:current_user_id] = nil
-    redirect_to root_url
+  def new
+    @user = User.new
   end
-
-
-  # these other methods could be used to increase functionality in the app but havent been integrate
-  # and arent vital to the apps functioning
-
-  # PATCH/PUT /users/1
-  # def update
-  #   if @current_user.update(user_params)
-  #     redirect_to @user, notice: 'User was successfully updated.'
-  #   else
-  #     render :edit
-  #   end
-  # end
-
-  # DELETE /users/1
-  # def destroy
-  #   @current_user.destroy
-  #   redirect_to users_url, notice: 'User was successfully destroyed.'
-  # end
-
-  # GET /users/new
-  # def new
-  #   @user = User.new
-  # end
-
-  # GET /users/1/edit
-  # def edit
-  # end
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
