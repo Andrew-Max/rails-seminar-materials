@@ -3,15 +3,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :set_current_user_id, :check_session
+  before_action :check_session
+  before_action :set_current_user, :check_session
 
-  def set_current_user_id
-    if User.any?
-      @id = cookies.signed[:current_user_id]
-      @current_user = @id ? User.find(@id) : nil
-    else
-      cookies.signed[:current_user_id] = nil
-    end
+  private
+
+  def set_current_user
+    cookies.signed[:current_user_id] = nil unless User.any?
+    @current_user = User.find_by_id(cookies.signed[:current_user_id])
   end
 
   def check_session
