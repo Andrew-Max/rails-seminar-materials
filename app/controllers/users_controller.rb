@@ -29,10 +29,10 @@ skip_before_filter :check_session, :only => [:new, :create]
   def create
     @user = User.new(user_params)
     if @user.save
-      params[:current_user_id] = @user.id
-      set_current_user_id
-      redirect_to @user, notice: 'User was successfully created.'
+      cookies.signed[:current_user_id] = @user.id
+      redirect_to @user
     else
+      @users = User.all
       @new_user = @user
       @errors = @user.errors
       @messages = Message.all
