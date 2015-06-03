@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :users, except: [:destroy, :edit, :update]
+  resources :users, except: [:destroy, :edit, :update, :index]
 
   resources :messages, only: [:index, :create]
 

@@ -1,18 +1,6 @@
 class UsersController < ApplicationController
 skip_before_filter :check_session, :only => [:new, :create]
 
-  # users#index notes
-  # The index method is in effect the home page of our app and combines multiple actions. The @users instance
-  # variable is in reality the "index action" it is responsible for gathering all the users so they can be
-  # displayed on the page. the @new_user is for the form for creating a new user. nothing happens with this object unless that form is submitted.
-  # The @messages varibale is essentially the messages index acction. It gets all the messages so they can be displayed by the page.
-  # This action will render the "app/views/users/index.htm.erb" by default so that is where all this data gets sent.
-  # routing info: HTTP GET to => /users
-  def index
-    @users = User.all
-    @messages = Message.all
-  end
-
   # users#show notes
   # this represent the only real sub page of our app. Clicking on a user or their avatar in the ui will take you here
   # Each link to a user passes an id param (params[:id] evaluates to the value of this parameter) so when this action is called we
