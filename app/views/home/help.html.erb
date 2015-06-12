@@ -1,0 +1,83 @@
+<h1>Welcome To the Challenge!</h1>
+
+<h2>You can access this page at anytime by going to /help</h2>
+
+<h3>Woah, this app is really ugly! Well it's your job to fix that! Follow the instructions below to start creating your social media app.</h3>
+
+<h1>ZOMG WALL OF TEXT!</h1>
+<H4>It's important though so read it!</H4>
+
+<h2>HINTS:</h2>
+<ol style="font-size: 18px;">
+  <li>
+    Every Piece of code you need to touch is wrapped like this:  <<< some code >>>. Global search for "<<<" in your editor to find what work you need to do!
+  </li>
+  <li>
+    When you see a hint wrapped in <<< >>>DO NOT DELETE IT! Instead copy it and write your code under it. That way you can use those hints as you are writing the code.
+  </li>
+  <li>
+    Read the hints carefully! I tried to provide as much info as possible in them.
+  </li>
+  <li>
+    You can find all of the answers at https://github.com/Andrew-Max/try_rails_presentation. You will benefit from trying to solve the problems on your own but if you are really stuck, get some help!
+  </li>
+</ol>
+
+<h2>Steps</h2>
+
+<h3>STEP 1) Create the routes:</h3>
+  <p>* the routes defined in the config/routes.rb file define your apps url's and what logic they talk to. During the presentation we will do this as a group but if you are wroking through on your own, use google and read the existing notes in the routes.rb file to figure out the syntax.</p>
+
+  <p>Once you are in routes.rb start by deleting the line that says "root 'home#help'" and uncomment the line that says "root 'home#index'" to get started
+</p>
+
+<h3>STEP 2) Go into app/models and go into each of the model files and follow the instructions to create the model logic for the apps two models.</h3>
+
+<h3>STEP 3) Go into app/controllers and follow the instructions to create the logic for the users_controller.rb and the messages_controller.rb files/</h3>
+
+<h3>STEP 4) Go into app views and follow the instructions in each of the view files to get your app running.</h3>
+
+At this point you should have a working app!
+
+As a follow up challenge see if you can get the update and delete actions to work for messages and users. Note that you will have to create controller logic as well as updating the UI to get this to work.
+
+<h2>Extra Challenges</h2>
+
+<h3>This app is actually very small! If you get through the written challenges with time to spare, start workig on one or even several of these of these bonus challenges</h3>
+
+<ol style="font-size: 18px;">
+  <li>
+    Implement sessions with the devise gem.
+
+    <p>The hand rolled sessions implementation used in this app is not fit for a production app! One common way to deal with auth in rails apps is with the devise gem. Add the gem to your gemfile, delete the current sessions logic and reimplement signup and sessions with devise. This will involve ui and ux changes as well as dealing with setting up the gem and routes. Don't forget to bundle once you install the gem!</p>
+  </li>
+  <li>
+    Impletment a twitter like "follow" functionality. This is much more complex and only recommended for people with development experience!
+
+    <p>This will involve a couple different tasks to get this working</p>
+
+    <ol>
+      <li>
+        Create a following_relationships join table which contains two fields: a followed_id foreign key and a follower_id foreign_key both of which are users.
+      </li>
+      <li>
+        Update the user model to specify a relationship between users where one is a follower and one is followed
+      </li>
+      <li>
+        Change the html to add a follow button to all users in the ui that will add a record to the join table with the current user as the follower and the target user as the followed
+      </li>
+      <li>
+        Add a section to the user/show page that displays all of the users a user is following
+      </li>
+      <li>
+        Update the message sharing ui so a user only sees messages from people who they follow.
+      </li>
+
+    </ol>
+  </li>
+  <li>
+  Do whatever you want!
+
+  <p>Update the app in any way you can think of!</p>
+  </li>
+</ol>
