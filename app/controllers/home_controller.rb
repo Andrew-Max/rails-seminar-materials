@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 # This will act as the current user's home page
   layout false, only: :help
+  skip_before_filter :check_session, only: :help
 
   def help
 
