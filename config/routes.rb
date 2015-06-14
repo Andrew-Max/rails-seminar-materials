@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   # or
   # resources :photos, except: [:show, :destroy]
 
-  # for more info on resources checkout http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions
+
+  # IMORTANT NOTE!: resources should be plural. so use "resources :photos", not "resources :photo"
+   # for more info on resources checkout http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions
 
   # there is also usually a special route declaration that specifies where the base url '/' routes to
 
