@@ -1,7 +1,7 @@
 try_rails_presentation
 ======================
 
-Check out the "create-a-rails-app" branch for a version of this site which has been turned into a project with detailed instructions for the user to recreate the whole site!
+Check out the "create-a-rails-app" branch for a version of this site which has been turned into a project with detailed instructions for the user to recreate the whole site.
 
 to get into that branch go to the terminal and use the command:
     git checkout create-a-rails-app
@@ -38,8 +38,10 @@ Best of luck brave warrior.
 `` $ gem install bundler `` <br>
 `` $ bundle `` <br>
 `` $ rake db:migrate `` <br>
+`` $ rails s `` <br>
     <br>
-If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browsser and the app will be up and running
+    
+If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browser and the app will be up and running
 
 If you get failures at any point along the way, copy and paste the error messages you get into google for tips on how to resolve the issue.
     
