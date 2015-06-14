@@ -1,6 +1,9 @@
 class MessagesController < ApplicationController
-  # messages#create notes
-  # routing info: HTTP POST to => /messages
+
+# ==============================================================
+# create messages method
+# routing info: HTTP POST to => /messages
+# ==============================================================
 
   # This action responds to new message form submissions (the form is on the user#show page)
   # If it succesfully creates the message object
