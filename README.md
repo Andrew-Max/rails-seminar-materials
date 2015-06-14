@@ -38,6 +38,7 @@ Best of luck brave warrior.
 `` $ gem install bundler `` <br>
 `` $ bundle `` <br>
 `` $ rake db:migrate `` <br>
+`` $ rails s `` <br>
     <br>
 If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browsser and the app will be up and running
 
