@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  #General Comments
+  #GENERAL COMMENTS
   #################################################################################
   # NOTE: Get an overview of all your route at the command line with "$rake routes".
 
@@ -33,18 +33,20 @@ Rails.application.routes.draw do
   # there is also usually a special route declaration that specifies where the base url '/' routes to
 
   # Once you have read the instructions, delete the line that says "root 'home#help'" and uncomment the line that says "root 'home#index'" to get started
-  # existing code
+
+  # EXISTING CODE
   ##################################################################################
 
   root 'home#help'
   # root 'home#index'
 
   resources :sessions, only: [:create, :new]
+
   get 'logout' => 'sessions#destroy'
   get 'help' => 'home#help'
 
 
-# code for completion
+# COMPLETE THIS CODE
 ###########################################################################################
   #<<<create routes for the user resource. Create all routes except: destroy, edit, index and update >>>
 
