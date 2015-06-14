@@ -10,9 +10,6 @@
 <h2>HINTS:</h2>
 <ol style="font-size: 18px;">
   <li>
-    Each file has comments explaining what you need to change in that file. Read the comments carefully!
-  </li>
-  <li>
     Every Piece of code you need to touch is wrapped like this:  <<< some code >>>. Global search for "<<<" in your editor to find what work you need to do!
   </li>
   <li>
@@ -28,13 +25,13 @@
 
 <h2>Steps</h2>
 
-<h3>STEP 1) Go into /config/routes.rb and create the apps routes:</h3>
-  <p>* the routes defined in the config/routes.rb file define your apps url's and what logic they talk to. During the presentation we will do this as a group but if you are working through on your own, use google and read the existing notes in the routes.rb file to figure out the syntax.</p>
+<h3>STEP 1) Create the routes:</h3>
+  <p>* the routes defined in the config/routes.rb file define your apps url's and what logic they talk to. During the presentation we will do this as a group but if you are wroking through on your own, use google and read the existing notes in the routes.rb file to figure out the syntax.</p>
 
-  <p>* Once you are in routes.rb start by deleting the line that says "root 'home#help'" and uncomment the line that says "root 'home#index'" to get started
+  <p>Once you are in routes.rb start by deleting the line that says "root 'home#help'" and uncomment the line that says "root 'home#index'" to get started
 </p>
 
-<h3>STEP 2) Go into app/models and go into each of the model files and follow the instructions to create the model logic for the app's two models.</h3>
+<h3>STEP 2) Go into app/models and go into each of the model files and follow the instructions to create the model logic for the apps two models.</h3>
 
 <h3>STEP 3) Go into app/controllers and follow the instructions to create the logic for the users_controller.rb and the messages_controller.rb files/</h3>
 
@@ -42,17 +39,13 @@
 
 At this point you should have a working app!
 
+As a follow up challenge see if you can get the update and delete actions to work for messages and users. Note that you will have to create controller logic as well as updating the UI to get this to work.
+
 <h2>Extra Challenges</h2>
 
-<h3>This app is actually very small! If you get through the written challenges with time to spare, start working on one or even several of these of these bonus challenges</h3>
+<h3>This app is actually very small! If you get through the written challenges with time to spare, start workig on one or even several of these of these bonus challenges</h3>
 
 <ol style="font-size: 18px;">
-  <li>
-    get the update and delete actions to work for messages and users.
-
-    <p>that you will have to create controller logic as well as updating the UI to get this to work.</p>
-  </li>
-
   <li>
     Implement sessions with the devise gem.
 
