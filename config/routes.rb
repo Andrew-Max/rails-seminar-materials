@@ -48,7 +48,7 @@ Rails.application.routes.draw do
 ###########################################################################################
   #<<<create routes for the user resource. Create all routes except: destroy, edit, index and update >>>
 
-  #<<<create routes for the message resource. Only maek a create route >>>
+  #<<<create routes for the message resource. Only make a create route >>>
 
   # after you have created the routes go to the command line and type '$ rake routes to check that you have created the routes correctly'
 
