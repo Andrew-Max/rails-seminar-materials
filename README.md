@@ -5,10 +5,10 @@ Check out the "create-a-rails-app" branch for a version of this site which has b
 
 to get into that branch go to the terminal and use the command:
     git checkout create-a-rails-app
-    
+
 the code in your try_rails presentation directory will now, through the magic of git, be the project version. Read the readme file in that directory for instructions on how to get started on the project.
 
-## Steps to get your new rails app all nice and good. 
+## Steps to get your new rails app all nice and good.
 (Based on my experience getting environments up on my ubuntu box).
 See below for Windows setup instuctions.
 
@@ -21,12 +21,12 @@ followed by <br>
 `` rvm install ruby 2.1.1 ``<br>
 and <br>
 `` rvm use --default ruby 2.1.1 ``<br>
-          
+
 3) Have git (if you use linux type the following in the command line:) <br>
 `` $ sudo apt-get install git `` <br>
-if you're a Mac user, figure it out yourslef ya hipster! Basically just grab it with homebrew
-Best of luck brave warrior.
-        
+if you're a Mac user try:
+``$ sudo brew install git``
+
 4) You may also need to install ruby gems <br>
   `` $ sudo apt-get install rubygems ``<br>
   and bundler<br>
@@ -40,11 +40,11 @@ Best of luck brave warrior.
 `` $ rake db:migrate `` <br>
 `` $ rails s `` <br>
     <br>
-    
+
 If all of these have succeeded you can go to the url 'localhost:3000' (note: no www just type that exactly)in your browser and the app will be up and running
 
 If you get failures at any point along the way, copy and paste the error messages you get into google for tips on how to resolve the issue.
-    
+
 This is far from an exhaustive list of steps but its aproximately what you'll need
 
 If you are looking for more detailed instructions the first chapter of http://www.railstutorial.org/book is a fantastic and detailed resource for setting up rails environments
@@ -61,7 +61,7 @@ If you are looking for more detailed instructions the first chapter of http://ww
     cd c:\RubyDev
     ruby dk.rb init
     ruby dk.rb install
-    
+
 3) Install bundler
     gem install bundler
 
