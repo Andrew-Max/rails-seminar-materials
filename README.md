@@ -24,7 +24,7 @@ and <br>
 
 3) Have git (if you use linux type the following in the command line:) <br>
 `` $ sudo apt-get install git `` <br>
-if you're a Mac user try:
+if you're a Mac user try: <br>
 ``$ sudo brew install git``
 
 4) You may also need to install ruby gems <br>
