@@ -1,0 +1,31 @@
+This will be an interactive learning session in which we will go through building a database backed Rails 4 web application from almost scratch. The app will be a twitter like application where users can sign up for accounts, leave messages on other user's profiles, and view a feed of their current messages.
+
+
+This presentation is directed towards anyone interested in learning rails! You do not have to have extensive programming experience to participate! However you should be familiar with some basic web conepts
+
+Experience Requirements
+
+- Basic understanding of HTML (know some basic tags and how they work)
+
+- Experience using ANY programming language
+
+
+If you have never done any programming or if you have never used ruby and want a head start on this class I would highly advise that you go through the intro to ruby tutorial on Codecademy
+
+http://www.codecademy.com/en/tracks/ruby
+
+Tech Requirements
+
+- A wifi capable computer
+
+If this is your first time building a web application I also recommend that you watch this video which explains some fundamentals of how web requests work
+
+https://www.youtube.com/watch?v=e4S8zfLdLgQ
+
+there will also be a link to part 2 of that video if you are interested in continuing learning
+
+
+Hope to see you there!
+
+
+-Andrew
