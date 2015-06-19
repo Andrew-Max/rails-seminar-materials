@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+# *********************
+  # Description
+
+  # This is the project's gemfile. Gems are code that other people wrote that you can add to your project
+  # (people generally refer to code like this as libraries)
+  # You can easily find gems online and add them to this file to add them to your project.
+  # After you add a gem to this file you will have to go to your command line and enter "bundle install" to actually add the gem.
+# *********************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
