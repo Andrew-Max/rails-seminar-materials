@@ -44,12 +44,13 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :new]
 
-  get 'logout' => 'sessions#destroy'
   get 'help' => 'home#help'
 
 
 # COMPLETE THIS CODE
 ###########################################################################################
+  #<<< send all get requests to the path "/logout" to the "destroy" method of the "sessionsController">>>
+
   #<<<create routes for the user resource. Create all routes except: destroy, edit, index and update >>>
 
   #<<<create routes for the message resource. Only make a create route >>>
