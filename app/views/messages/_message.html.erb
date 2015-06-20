@@ -14,10 +14,14 @@ Each time this is rendered, the current message will be availble under the varia
       <%= gravatar_link(message.author) %>
     </div>
     <div>
-      To: <!-- <<<use the rails link_to helper to create a link to the message owners profile with their name as the link text. Make sure to put it in proper erb tags>>> -->
+      <p>To:
+        <!-- <<<use the rails link_to helper to create a link to the message owners profile with their name as the link text. Make sure to put it in proper erb tags>>> -->
+      </p>
     </div>
     <div class="info">
-      <p>From: <!-- <<<use the rails link_to helper to create a link to the message authors profile with their name as the link text. Make sure to put it in proper erb tags>>> --> %></p>
+      <p>From:
+        <!-- <<<use the rails link_to helper to create a link to the message authors profile with their name as the link text. Make sure to put it in proper erb tags>>> -->
+      </p>
       <p><%= message.created_at.to_datetime.to_s(:easy) %></p>
     </div>
   </div>
