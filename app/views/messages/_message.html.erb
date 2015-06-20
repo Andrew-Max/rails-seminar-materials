@@ -1,16 +1,26 @@
-<!-- this is the markup for an individual message. The data for the message itself is passed in
-to the partial explicitly in the render statement by the view which rendered it, this
-partial then has access to the message object inside the erb tags which are used to display its data -->
+<!-- ********************************************************************
+Description: the message partial (displays a single message)
+Routing info: <%#= render partial 'messages/message'%> will render this partial
+
+This partial is designed to be rendered for each message in a collection of messages
+
+by passing ", collection: messages" to the render partial piece above we can render this once for each message in an array assigned to the variable messages.
+
+Each time this is rendered, the current message will be availble under the variable "message"
+******************************************************************** -->
+
+
+
 <div class="message">
   <div class="meta-data">
     <div class="gravatar">
       <%= gravatar_link(message.author) %>
     </div>
     <div>
-      To: <!-- <<<use the rails link_to helper to create a link to the message owners profile with their name as the link text make sure to put it in proper erb tags>>> -->
+      To: <!-- <<<use the rails link_to helper to create a link to the message owners profile with their name as the link text. Make sure to put it in proper erb tags>>> -->
     </div>
     <div class="info">
-      <p>From: <!-- <<<use the rails link_to helper to create a link to the message authors profile with their name as the link text make sure to put it in proper erb tags>>> --> %></p>
+      <p>From: <!-- <<<use the rails link_to helper to create a link to the message authors profile with their name as the link text. Make sure to put it in proper erb tags>>> --> %></p>
       <p><%= message.created_at.to_datetime.to_s(:easy) %></p>
     </div>
   </div>
@@ -18,3 +28,10 @@ partial then has access to the message object inside the erb tags which are used
     <!-- <<<output the messages body here. Dont forget to put this in the proper erb tags>>> -->
   </div>
 </div>
+
+<!-- ****************************
+hints
+
+checkout http://mixandgo.com/blog/how-to-use-link_to-in-rails
+
+for help with link-to helpers -->

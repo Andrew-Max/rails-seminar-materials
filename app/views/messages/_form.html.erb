@@ -1,7 +1,19 @@
-<!-- Although this is a messages view it is only ever rendered as a partial by the users/show.html.erb view indicated by the
-underscore at the beginning of its file name. This is a rails form which submits the inputs from the fields at the bottom
-to the messages# create controller action which creates a new message object in the database. The hidden fields pass parameters
-back to the controller but dont take user input and are not visible to the user -->
+<!-- ********************************************************************
+Description: the messages form partial
+Routing info: <%#= render 'messages/form' %> will render this partial
+
+This partial is a form for creating a new message. Because we may want to create new messages in multiple places in the app it is better to put it in a partial. That way whenever we want a message form we can just render the partial.
+
+This form uses the rails "form_for" helper to generate a HTML form for
+creating a new message in our database
+The helper intelligently knows which route to submit the form to based on the class of the object we pass into it (message in this case)
+
+more info for form_for at http://apidock.com/rails/ActionView/Helpers/FormHelper/form_for
+******************************************************************** -->
+
+
+
+
 <h1>New message</h1>
 <% if @current_user %>
   <%= form_for(message) do |f| %>
