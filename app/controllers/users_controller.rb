@@ -59,6 +59,9 @@ skip_before_filter :check_session, :only => [:new, :create]
     end
   end
 
+  # EXPLANATION
+  # ==================
+  # Note: this action is completed. You don't have to do anything here.
   # This action recieves the data from the new user form and creates a user based off of it.
 
   # There is no view for it, it either redirects to the new users profile if it succeeds or back to the new user form if it fails.ew

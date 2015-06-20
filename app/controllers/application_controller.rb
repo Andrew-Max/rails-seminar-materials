@@ -1,6 +1,20 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+
+  # ************************
+  # Description
+
+  # If you look at the class definition of any other controller you will see the line
+  # class WhateverController < ApplicationController
+
+  # That means that those controllers inherit from this one.
+
+  # So what does that mean?
+
+  # Basically anything you put in here also gets put into any controller that inherits from it.
+  # By defining something in here you are essentially defining it in every controller
+  # If you have code that is repeated in multiple controllers, put it here instead to avoid repeating yourself
+  # *************************
+
   protect_from_forgery with: :exception
 
   before_action :check_session
