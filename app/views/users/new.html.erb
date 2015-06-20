@@ -1,7 +1,21 @@
-<!-- This is the new user signup form rendered by the users#new(the new method of the users controller)
-This form intelligently knows (via code in the form_for method) that this should submit to the create method in the users controller
-(users#create in rails notation)
-It will pass the values entered in the fields via a hash called params when it is submitted -->
+<!-- ********************************************************************
+Description: the new users form template
+Routing info: Rendered by the new method of the usersController
+
+This is the form to create a new user.
+
+This form uses the rails "form_for" helper to generate a HTML form for
+creating a new user in our database
+
+The helper intelligently knows which route to submit the form to based on the class of the object we pass into it (User in this case). Therefore this form will submit to the create method in the UsersController
+
+It will pass the values entered in the fields  to the controller method via a hash called params when it is submitted
+
+
+more info for form_for at http://apidock.com/rails/ActionView/Helpers/FormHelper/form_for
+******************************************************************** -->
+
+
 
 <p>Go to the views/users/new.html.erb and follow the hints to create the functionality on this page. Delete this text when you are finished</p>
 

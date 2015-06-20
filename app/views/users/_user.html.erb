@@ -1,3 +1,10 @@
+<!-- ********************************************************************
+Description: this partial is an individual user id card which is displayed on the home page
+Routing info: <%#= render 'users/user' %> will render this partial
+
+by passing a collection of users to this partial when you render it you can display user cards for a group of users.
+******************************************************************** -->
+
 <!-- this partial is an individual user id card which is displayed on the home page -->
 <div class="id-card">
   <div class="avatar">
@@ -5,10 +12,20 @@
   </div>
   <% if @current_user %>
     <!-- <<<use the rails link_to helper to create a link to the user path for the variable user with a text of the user's name. use link_to's "class" agrument to give this link a css class of "name">>> -->
-    <!-- use the link_to at the bottom of the page as well as google for help with syntax and arguments! -->
+    <!-- use the link_to at the bottom of the page as well as google for hel+p with syntax and arguments! -->
     <%= link_to user.name, user_path(user), class: "name" %>
   <% else %>
     <div class="name"><%= user.name %></div>
   <% end %>
   <%= link_to("Be Me", sessions_path(id: user.id), method: "POST", class: "btn btn-primary btn-success") %>
 </div>
+
+<!-- ****************************
+hints
+
+checkout
+http://mixandgo.com/blog/how-to-use-link_to-in-rails
+and
+http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html
+
+for help with link-to helpers -->
