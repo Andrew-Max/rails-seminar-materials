@@ -6,16 +6,28 @@ class SessionsController < ApplicationController
   # Other controllers can then find the user whos id matches the current_user_id_cookie to figure out who the active user is.
   # This is simple way to deal with sessions for this sample app but would be a very poor way to do this in a production application.
 
+# ==============================================================
+# destroy session method
+# routing info: HTTP GET to => /logout
+# ==============================================================
  def destroy
     cookies.signed[:current_user_id] = nil
     redirect_to new_session_path
   end
 
-
+# ==============================================================
+# new session method
+# routing info: HTTP GET to => /sessions/new
+# ==============================================================
   def new
     @users = User.all
   end
 
+
+# ==============================================================
+# create session method
+# routing info: HTTP POST to => /sessions
+# ==============================================================
   def create
     user_id = params[:id]
     cookies.signed[:current_user_id] = user_id
