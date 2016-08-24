@@ -21,10 +21,10 @@ followed by <br>
 and <br>
 `` rvm use --default ruby 2.1.1 ``<br>
 
-3. Have git (if you use linux type the following in the command line:) <br>
+3. Install git (if you use linux type the following in the command line:) <br>
 `` $ sudo apt-get install git `` <br>
 
-3.a If you're a Mac user, instead of the above apt-get command (which is for ubuntu) do the install with homebrew (install homebrew if you  dont have it):
+3.a If you're a Mac user, replace all instances of the `apt-get` command (which is for ubuntu / debian) with the  `homebrew` command. You will need to install homebrew if you  dont have it and then:
 ``$ sudo brew install git``
 
 1. You may also need to install ruby gems <br>
