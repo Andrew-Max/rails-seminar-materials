@@ -24,8 +24,7 @@ and <br>
 3. Have git (if you use linux type the following in the command line:) <br>
 `` $ sudo apt-get install git `` <br>
 
-### If you're a Mac user try:
-
+3.a If you're a Mac user, instead of the above apt-get command (which is for ubuntu) do the install with homebrew (install homebrew if you  dont have it):
 ``$ sudo brew install git``
 
 1. You may also need to install ruby gems <br>
